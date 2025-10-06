@@ -18,17 +18,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 40px;
         }
 
         .calendar-container {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(10px);
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            padding: 40px;
             width: 100%;
-            max-width: 400px;
+            max-width: 900px;
             color: white;
             position: relative;
             overflow: hidden;
@@ -41,28 +41,28 @@
 
         .calendar-header {
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 35px;
             position: relative;
         }
 
         .calendar-header h1 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
             animation: fadeIn 1s ease;
         }
 
         .calendar-header p {
-            font-size: 1.1rem;
+            font-size: 1.5rem;
             opacity: 0.9;
             animation: fadeIn 1.5s ease;
         }
 
         .date-display {
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 25px;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 35px;
             text-align: center;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             animation: slideUp 1s ease;
@@ -70,69 +70,81 @@
         }
 
         .nepali-date {
-            font-size: 3.5rem;
+            font-size: 5rem;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
             animation: pulse 2s infinite;
         }
 
         .nepali-month-year {
-            font-size: 1.5rem;
-            margin-bottom: 5px;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
         }
 
         .nepali-day {
-            font-size: 1.2rem;
+            font-size: 1.8rem;
             opacity: 0.9;
         }
 
         .english-date {
-            margin-top: 15px;
-            font-size: 1rem;
+            margin-top: 20px;
+            font-size: 1.5rem;
             opacity: 0.8;
             border-top: 1px solid rgba(255, 255, 255, 0.2);
-            padding-top: 10px;
+            padding-top: 15px;
         }
 
         .calendar-grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            gap: 8px;
-            margin-bottom: 20px;
+            gap: 12px;
+            margin-bottom: 30px;
             animation: fadeIn 2s ease;
         }
 
         .day-name {
             text-align: center;
             font-weight: bold;
-            padding: 8px 0;
-            font-size: 0.9rem;
+            padding: 15px 0;
+            font-size: 1.3rem;
             border-bottom: 2px solid rgba(255, 255, 255, 0.3);
         }
 
         .calendar-day {
             text-align: center;
-            padding: 12px 0;
-            border-radius: 10px;
+            padding: 20px 0;
+            border-radius: 12px;
             transition: all 0.3s ease;
             cursor: pointer;
             position: relative;
             border: 2px solid rgba(255, 255, 255, 0.2);
             background: rgba(255, 255, 255, 0.05);
+            font-size: 1.3rem;
+            min-height: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .calendar-day:hover {
             background: rgba(255, 255, 255, 0.2);
-            transform: scale(1.1);
+            transform: scale(1.05);
             border-color: rgba(255, 255, 255, 0.5);
         }
 
         .current-day {
             background: rgba(255, 255, 255, 0.3);
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
             font-weight: bold;
             border: 2px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .holiday {
+            background: rgba(255, 0, 0, 0.2);
+            color: #ff9999;
+            border: 2px solid rgba(255, 100, 100, 0.5);
         }
 
         .festival-day {
@@ -140,30 +152,43 @@
             background: rgba(255, 215, 0, 0.1);
         }
 
+        .festival-name {
+            font-size: 0.8rem;
+            margin-top: 5px;
+            color: #FFD700;
+            font-weight: bold;
+        }
+
         .calendar-footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 20px;
-            padding-top: 15px;
+            margin-top: 30px;
+            padding-top: 20px;
             border-top: 2px solid rgba(255, 255, 255, 0.2);
             animation: fadeIn 2.5s ease;
         }
 
         .festival-indicator {
-            font-size: 0.9rem;
+            font-size: 1.2rem;
             opacity: 0.9;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
         }
 
         .controls button {
             background: rgba(255, 255, 255, 0.2);
             border: 2px solid rgba(255, 255, 255, 0.3);
             color: white;
-            padding: 8px 15px;
+            padding: 12px 25px;
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
             font-weight: bold;
+            font-size: 1.1rem;
         }
 
         .controls button:hover {
@@ -174,8 +199,8 @@
 
         .decoration {
             position: absolute;
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.1);
             z-index: -1;
@@ -183,15 +208,42 @@
         }
 
         .decoration-1 {
-            top: -50px;
-            right: -50px;
+            top: -70px;
+            right: -70px;
             animation: float 6s ease-in-out infinite;
         }
 
         .decoration-2 {
-            bottom: -70px;
-            left: -70px;
+            bottom: -90px;
+            left: -90px;
             animation: float 8s ease-in-out infinite;
+        }
+
+        .month-year-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .month-year-nav button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .month-year-nav button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+            border-color: rgba(255, 255, 255, 0.6);
         }
 
         @keyframes fadeIn {
@@ -223,17 +275,23 @@
         }
 
         /* Responsive design */
-        @media (max-width: 480px) {
+        @media (max-width: 768px) {
             .calendar-container {
-                padding: 20px;
+                padding: 25px;
+                max-width: 95%;
+            }
+            
+            .calendar-header h1 {
+                font-size: 2.5rem;
             }
             
             .nepali-date {
-                font-size: 2.8rem;
+                font-size: 3.5rem;
             }
             
             .calendar-day {
-                padding: 10px 0;
+                padding: 15px 0;
+                min-height: 60px;
             }
         }
     </style>
@@ -255,6 +313,12 @@
             <div class="english-date" id="english-date">June 10, 2024</div>
         </div>
         
+        <div class="month-year-nav">
+            <button id="prev-year">← वर्ष</button>
+            <div id="current-year-month">२०८१ जेठ</div>
+            <button id="next-year">वर्ष →</button>
+        </div>
+        
         <div class="calendar-grid" id="calendar-grid">
             <!-- Day names -->
             <div class="day-name">आइत</div>
@@ -271,8 +335,8 @@
         <div class="calendar-footer">
             <div class="festival-indicator" id="festival-indicator">Today: No festival</div>
             <div class="controls">
-                <button id="prev-month">←</button>
-                <button id="next-month">→</button>
+                <button id="prev-month">← महिना</button>
+                <button id="next-month">महिना →</button>
             </div>
         </div>
     </div>
@@ -289,6 +353,13 @@
             "आइतबार", "सोमबार", "मंगलबार", "बुधबार", "बिहिबार", "शुक्रबार", "शनिबार"
         ];
 
+        // Accurate Nepali calendar data (days in each month for BS 2081)
+        const nepaliCalendarData = {
+            2081: [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
+            2080: [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+            2082: [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 30]
+        };
+
         // Sample festival data (in a real app, this would be more comprehensive)
         const festivals = {
             "1-1": "नेपाली नयाँ वर्ष",
@@ -303,7 +374,7 @@
         // Current date information
         let currentNepaliDate = {
             year: 2081,
-            month: 2, // 0-indexed (Jestha is month 1, so we use 1)
+            month: 1, // Jestha (0-indexed)
             day: 28,
             dayOfWeek: 1 // Monday
         };
@@ -321,6 +392,14 @@
             document.getElementById('next-month').addEventListener('click', function() {
                 navigateMonth(1);
             });
+            
+            document.getElementById('prev-year').addEventListener('click', function() {
+                navigateYear(-1);
+            });
+            
+            document.getElementById('next-year').addEventListener('click', function() {
+                navigateYear(1);
+            });
         });
 
         // Update the main date display
@@ -332,6 +411,10 @@
             document.getElementById('nepali-month-year').textContent = `${monthName}, ${dayName}`;
             document.getElementById('nepali-day').textContent = 
                 `${currentNepaliDate.day} ${monthName} ${currentNepaliDate.year}`;
+            
+            // Update year-month navigation
+            document.getElementById('current-year-month').textContent = 
+                `${currentNepaliDate.year} ${nepaliMonths[currentNepaliDate.month]}`;
             
             // Check if today has a festival
             const festivalKey = `${currentNepaliDate.month + 1}-${currentNepaliDate.day}`;
@@ -349,11 +432,12 @@
                 calendarGrid.removeChild(calendarGrid.lastChild);
             }
             
-            // Calculate days in the current month (simplified for demo)
+            // Calculate days in the current month
             const daysInMonth = getDaysInMonth(currentNepaliDate.year, currentNepaliDate.month);
             
             // Calculate the starting day of the month (0 = Sunday, 1 = Monday, etc.)
-            const startDay = (currentNepaliDate.dayOfWeek - (currentNepaliDate.day % 7) + 7) % 7;
+            // This is a simplified calculation - in a real app, you'd use accurate BS data
+            const startDay = calculateStartDay(currentNepaliDate.year, currentNepaliDate.month);
             
             // Add empty cells for days before the start of the month
             for (let i = 0; i < startDay; i++) {
@@ -367,7 +451,15 @@
             for (let day = 1; day <= daysInMonth; day++) {
                 const dayElement = document.createElement('div');
                 dayElement.className = 'calendar-day';
-                dayElement.textContent = day;
+                dayElement.innerHTML = `<div>${day}</div>`;
+                
+                // Calculate day of week (0 = Sunday, 6 = Saturday)
+                const dayOfWeek = (startDay + day - 1) % 7;
+                
+                // Highlight Saturdays (holidays) in red
+                if (dayOfWeek === 6) { // Saturday
+                    dayElement.classList.add('holiday');
+                }
                 
                 // Highlight current day
                 if (day === currentNepaliDate.day) {
@@ -378,12 +470,18 @@
                 const festivalKey = `${currentNepaliDate.month + 1}-${day}`;
                 if (festivals[festivalKey]) {
                     dayElement.classList.add('festival-day');
-                    dayElement.style.color = '#FFD700'; // Gold color for festivals
-                    dayElement.style.fontWeight = 'bold';
+                    dayElement.innerHTML += `<div class="festival-name">${festivals[festivalKey]}</div>`;
                 }
                 
                 calendarGrid.appendChild(dayElement);
             }
+        }
+
+        // Calculate the starting day of the month (simplified)
+        function calculateStartDay(year, month) {
+            // This is a simplified calculation
+            // In a real implementation, you would use accurate BS calendar algorithms
+            return (year * 12 + month) % 7;
         }
 
         // Navigate to previous or next month
@@ -407,10 +505,22 @@
             generateCalendarGrid();
         }
 
-        // Simplified function to get days in a month
-        // In a real implementation, this would use actual Nepali calendar data
+        // Navigate to previous or next year
+        function navigateYear(direction) {
+            currentNepaliDate.year += direction;
+            
+            // Update the calendar
+            updateCalendarDisplay();
+            generateCalendarGrid();
+        }
+
+        // Get days in a month using accurate BS data
         function getDaysInMonth(year, month) {
-            // This is a simplified version - a real implementation would use actual BS calendar data
+            if (nepaliCalendarData[year] && nepaliCalendarData[year][month]) {
+                return nepaliCalendarData[year][month];
+            }
+            
+            // Fallback to approximate values if data not available
             const monthLengths = {
                 0: 31, // Baisakh
                 1: 31, // Jestha
